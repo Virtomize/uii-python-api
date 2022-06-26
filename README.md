@@ -1,2 +1,2 @@
-# uii-python-api
-Python implementation for a UII api client
+# UII Python API
+A client implemenation for Virtomize Unattended Install Images API
