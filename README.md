@@ -3,7 +3,7 @@ This repository contains an implementation of a client for the [**Virtomize Unat
 
 ## Build an ISO
 Building an ISO requires two steps.
-1. Create a client object by using the `NewClient` function. 
+1. Create a client. 
 This requires the API token created in the UI (see below). 
 
 ```python
