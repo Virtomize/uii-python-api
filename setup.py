@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='uiipythonapi',
-    version='0.0.4',
+    version='1.0.0',
     url='https://github.com/virtomize/uii-python-api',
     author='Virtomize GmbH',
     author_email='api@virtomize.com',

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "uiipythonapi"
-version = "0.0.2"
+version = "1.0.0"
 description = "Python client for the unattended installation iso api by Virtomize"
 readme = "README.md"
 authors = [{ name = "Virtomize GmbH", email = "api@virtomize.com" }]
