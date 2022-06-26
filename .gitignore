@@ -1,1 +1,4 @@
 .idea/*
+build/*
+uiipythonapi.egg-info
+dist/
