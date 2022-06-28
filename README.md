@@ -6,18 +6,18 @@ Building an ISO requires two steps.
 1. Create a client. 
 This requires the API token created in the UI (see below). 
 
-```python
-import uiipythonapi as uii
-api = uii.Client("token here")
-```
+        ```python
+        import uiipythonapi as uii
+        api = uii.Client("token here")
+        ```
 
 2. Building the ISO by using `build` on the client object. 
-```python
-err = api.build("debian10.iso", "debian", "10", "x86_64", "hostnamehere", [{
-        "dhcp": True,        
-        "nointernet": False,
-    }])
-```
+        ```python
+        err = api.build("debian10.iso", "debian", "10", "x86_64", "hostnamehere", [{
+                "dhcp": True,        
+                "nointernet": False,
+        }])
+        ```
    
    `build` requires the following parameters: 
    - A path to the output file
