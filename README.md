@@ -23,7 +23,7 @@ err = api.build("debian10.iso", "debian", "10", "x86_64", "hostnamehere", [{
    - A path to the output file
    - The name of the distribution
    - The version number of the distribution
-   - The architecture of the distirbution (`x86_64` in most cases)
+   - The architecture of the distribution (`x86_64` in most cases)
    - A configuration of the network interfaces
       
 ## Register an API token
