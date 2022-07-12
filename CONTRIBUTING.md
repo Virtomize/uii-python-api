@@ -25,10 +25,6 @@ Just open a [regular issue](https://github.com/virtomize/uii-python-api/issues/n
 
 ## Pull Requests
 
-### Dependencies
-
-This project uses [Mage](https://magefile.org/) which is a replacement for the classical make.
-
 ### 1. Fork 
 
 Fork the project [on Github](https://github.com/virtomize/uii-python-api/) and clone your fork
@@ -58,15 +54,7 @@ $ git checkout -b example-branch -t upstream/master
 
 ### 3. Code
 
-Follow the [official code guidelines](https://golang.org/doc/effective_go.html).
-
-To make sure the code runs correct, test the code using:
-
-```
-mage test
-```
-
-also add unit tests to test your code contributions.
+Add unit tests to test your code contributions.
 
 For new features add a short description in the README.md.
 
