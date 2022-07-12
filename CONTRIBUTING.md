@@ -27,7 +27,7 @@ Just open a [regular issue](https://github.com/virtomize/uii-python-api/issues/n
 
 ### 1. Fork 
 
-Fork the project [on Github](https://github.com/virtomize/uii-python-api/) and clone your fork
+Fork the project [on GitHub](https://github.com/virtomize/uii-python-api/) and clone your fork
 
 ```
 $ git clone git@github.com:username/uii-python-api.git
@@ -110,7 +110,7 @@ While reviewing you will probably get some feedback or requests for changes to y
 
 To make changes to an existsing Pull Request, make the changes to your local branch.
 Add a new commit including those changes and push them to your fork.
-The Pull Requests will automatically updated by GitHub.
+The Pull Requests will be automatically updated by GitHub.
 
 ```
 $ git add files/changed
