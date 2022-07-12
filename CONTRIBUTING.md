@@ -15,7 +15,7 @@ The uii-python-api project follows the [Contributor Covenant Code of Conduct](ht
 
 You can contribute:
 
-- By opening an issue for discussion: For example, if you found a bug, creating a bug report using the [template](https://github.com/virtomize/uii-python-api/blob/master/.github/ISSUE_TEMPLATE/bug_report.md) is the way to report it.
+- By opening an issue for discussion: For example, if you found a bug, creating a bug report using the template is the way to report it.
 - By providing supporting details to an existing issue: For example, additional testcases.
 - By helping to resolve an issue: For example by opening a [Pull Request](https://github.com/virtomize/uii-python-api/pulls)
 
@@ -111,26 +111,7 @@ $ git push origin example-branch
 
 ### 7. Open the Pull Request
 
-From within GitHub, by opening a new Pull Request will present you with a template that should be filled out:
-
-```
-<!--
-Thank you for your pull request. Please provide a description above and review
-the requirements below.
-
-Bug fixes and new features should include unit tests.
-
-Contributors guide: https://github.com/virtomize/uii-python-api/blob/master/CONTRIBUTING.md
--->
-
-##### Checklist
-<!-- Remove items that do not apply. For completed items, change [ ] to [x]. -->
-
-- [ ] `mage test` passes
-- [ ] unit tests are included and tested
-- [ ] documentation is added or changed
-```
-
+From within GitHub, by opening a new Pull Request will present you with a template that should be filled out.
 Please fill out all details, feel free to skip not nessesary parts or if you're not sure what to fill in.
 
 Once opened, the Pull Request is opend and will be reviewed.
