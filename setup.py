@@ -18,7 +18,7 @@ setup(
     long_description_content_type="text/markdown",
     license='BSD 2-clause',
     packages=['uiipythonapi'],
-    package_dir={'uiipythonapi': 'src/uiipythonapi'},
+    package_dir={'uiipythonapi': './uiipythonapi'},
     install_requires=[
         'requests'
     ],
