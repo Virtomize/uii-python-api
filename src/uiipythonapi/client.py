@@ -2,9 +2,14 @@ import requests
 
 base_url = "https://api.virtomize.com/uii/"
 
+''' Client to interact with the Virtomize UII API. '''
+
+
 class Client:
     def __init__(self, token):
         self.token = token
+
+    ''' Read a list of all supported operation systems '''
 
     def read_os_list(self):
         endpoint = base_url + "oslist"
@@ -19,6 +24,8 @@ class Client:
             return response_json["_embedded"], None
 
         return [], "no data returned"
+
+    ''' Read a list of all available packages for an operation system '''
 
     def read_package_list(self, dist: str, version: str, arch: str):
         endpoint = base_url + "packages"
@@ -40,6 +47,8 @@ class Client:
 
         return [], "no data returned"
 
+    ''' Build an ISO '''
+
     def build(self, destination: str, dist: str, version: str, arch: str, hostname: str, networks) -> str:
         endpoint = base_url + "images"
         headers = self.__default_header()
@@ -58,7 +67,7 @@ class Client:
         with open(destination, "wb") as f:
             for chunk in response.iter_content(chunk_size=16 * 1024):
                 f.write(chunk)
-        return
+        return ""
 
     def __default_header(self):
         return {
