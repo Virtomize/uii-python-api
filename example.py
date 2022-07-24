@@ -30,5 +30,5 @@ def static_network(domain: str = "",
     }
 
 
-error = api.build("debian10.iso", "debian", "10", "x86_64", "horst", [dhcp_network()])
-print("Errors: " + str(error))
+ERROR = api.build("debian10.iso", "debian", "10", "x86_64", "horst", [dhcp_network()])
+print("Errors: " + str(ERROR))
