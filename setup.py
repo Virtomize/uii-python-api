@@ -1,4 +1,6 @@
-import os
+"""
+Configuration for building the pip package
+"""
 
 from setuptools import setup
 
@@ -11,12 +13,12 @@ setup(
     url='https://github.com/virtomize/uii-python-api',
     author='Virtomize GmbH',
     author_email='api@virtomize.com',
-    description="A client implemenation for Virtomize Unattended Install Images API",
+    description="A client implementation for Virtomize Unattended Install Images API",
     long_description=long_description,
     long_description_content_type="text/markdown",
     license='BSD 2-clause',
     packages=['uiipythonapi'],
-    package_dir={'uiipythonapi': 'src/uiipythonapi'},
+    package_dir={'uiipythonapi': './uiipythonapi'},
     install_requires=[
         'requests'
     ],

@@ -100,15 +100,15 @@ $ git push origin example-branch
 ### 7. Open the Pull Request
 
 From within GitHub, by opening a new Pull Request will present you with a template that should be filled out.
-Please fill out all details, feel free to skip not nessesary parts or if you're not sure what to fill in.
+Please fill out all details, feel free to skip not necessary parts or if you're not sure what to fill in.
 
-Once opened, the Pull Request is opend and will be reviewed.
+Once opened, the Pull Request is opened and will be reviewed.
 
 ### 8. Updates and discussion
 
 While reviewing you will probably get some feedback or requests for changes to your Pull Request. This is normal and a necessary part of the process to evaluate the changes and there correctness. 
 
-To make changes to an existsing Pull Request, make the changes to your local branch.
+To make changes to an existing Pull Request, make the changes to your local branch.
 Add a new commit including those changes and push them to your fork.
 The Pull Requests will be automatically updated by GitHub.
 

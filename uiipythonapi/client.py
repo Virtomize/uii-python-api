@@ -1,13 +1,20 @@
+"""
+Client implementation for the Virtomize UII API.
+"""
+# pylint: disable=too-many-arguments,broad-except
 import requests
 
-base_url = "https://api.virtomize.com/uii/"
+BASE_URL = "https://api.virtomize.com/uii/"
+
 
 class Client:
+    """ Client to interact with the Virtomize UII API. """
     def __init__(self, token):
         self.token = token
 
     def read_os_list(self):
-        endpoint = base_url + "oslist"
+        """ Read a list of all supported operating systems """
+        endpoint = BASE_URL + "oslist"
         headers = self.__default_header()
 
         response = requests.get(endpoint, headers=headers, verify=False)
@@ -21,7 +28,8 @@ class Client:
         return [], "no data returned"
 
     def read_package_list(self, dist: str, version: str, arch: str):
-        endpoint = base_url + "packages"
+        """ Read a list of all available packages for an operating system """
+        endpoint = BASE_URL + "packages"
         headers = self.__default_header()
         data = {
             "arch": arch,
@@ -40,8 +48,15 @@ class Client:
 
         return [], "no data returned"
 
-    def build(self, destination: str, dist: str, version: str, arch: str, hostname: str, networks) -> str:
-        endpoint = base_url + "images"
+    def build(self,
+              destination: str,
+              dist: str,
+              version: str,
+              arch: str,
+              hostname: str,
+              networks) -> str:
+        """ Build an ISO """
+        endpoint = BASE_URL + "images"
         headers = self.__default_header()
         data = {
             "arch": arch,
@@ -55,10 +70,10 @@ class Client:
         if not response.status_code == 200:
             return parse_error(response)
 
-        with open(destination, "wb") as f:
+        with open(destination, "wb") as iso_file:
             for chunk in response.iter_content(chunk_size=16 * 1024):
-                f.write(chunk)
-        return
+                iso_file.write(chunk)
+        return ""
 
     def __default_header(self):
         return {
@@ -67,12 +82,13 @@ class Client:
         }
 
 def parse_error(response) -> str:
+    """ Parse an error returned by the API """
     try:
         response_json = response.json()
         if "errors" in response_json:
             errors = response_json["errors"]
             return ", ".join(errors)
-    except:
-        pass
+    except Exception as ex:
+        print(f'Error calling API: {ex}')
 
     return "request was not successful and returned \"" + str(response.content) + "\""

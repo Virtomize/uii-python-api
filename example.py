@@ -1,29 +1,34 @@
-#import src.uiipythonapi as uii
+""" Example for the usage of the UII python API package """
 import uiipythonapi as uii
 
 api = uii.Client("token here")
 packageList, err = api.read_package_list("debian", "10", "x86_64")
 print("Number of known packages for Debian 10: " + str(len(packageList)))
 
-def dhcp_network(domain: str = "", ipnet: str = "", gateway: str = "", dns: str = "", nointernet: bool = False):
+
+def dhcp_network():
+    """ Example of how to define a dynamic network """
     return {
         "dhcp": True,
-        # "domain": domain,
-        # "ipnet": ipnet,
-        # "gateway": gateway,
-        # "dns": dns,
         "nointernet": False,
     }
 
-def static_network(domain: str = "", ipnet: str = "", gateway: str = "", dns: str = "", nointernet: bool = False):
+
+def static_network(domain: str = "",
+                   ip_net: str = "",
+                   gateway: str = "",
+                   dns: str = "",
+                   no_internet: bool = False):
+    """ Example of how to define a static network """
     return {
         "dhcp": False,
         "domain": domain,
-        "ipnet": ipnet,
+        "ipnet": ip_net,
         "gateway": gateway,
         "dns": dns,
-        "nointernet": nointernet,
+        "nointernet": no_internet,
     }
 
-err = api.build("debian10.iso", "debian", "10", "x86_64", "horst", [dhcp_network()])
-print("Errors: " + str(err))
+
+ERROR = api.build("debian10.iso", "debian", "10", "x86_64", "horst", [dhcp_network()])
+print("Errors: " + str(ERROR))
