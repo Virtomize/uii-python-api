@@ -1,7 +1,7 @@
 """
 Client implementation for the Virtomize UII API.
 """
-#pylint: disable=too-many-arguments
+# pylint: disable=too-many-arguments,broad-except
 import requests
 
 BASE_URL = "https://api.virtomize.com/uii/"
