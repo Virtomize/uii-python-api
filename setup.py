@@ -2,14 +2,28 @@
 Configuration for building the pip package
 """
 
+import os
 from setuptools import setup
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+
+def get_version(default :str ):
+    """ retrieve version number from environment variable """
+    version = os.getenv('RELEASE_TAG')
+    if version is None:
+        print("no version passed")
+        return default
+
+    print(version)
+    version = version.replace("v", "")
+    return version
+
+
 setup(
     name='uiipythonapi',
-    version='1.0.0',
+    version=get_version("1.0.0"),
     url='https://github.com/virtomize/uii-python-api',
     author='Virtomize GmbH',
     author_email='api@virtomize.com',
